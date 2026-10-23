@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light dark;
+  --ink: #111827;
+  --muted: #4b5563;
+  --line: #d1d5db;
+  --bg: #f9fafb;
+  --card: #fff;
+  --accent: #1d4ed8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e5e7eb;
+    --muted: #9ca3af;
+    --line: #374151;
+    --bg: #0f172a;
+    --card: #111c33;
+    --accent: #93c5fd;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 17px/1.55 ui-sans-serif, system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+header,
+main,
+footer {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  letter-spacing: -0.03em;
+  margin: 1.5rem 0 0.6rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 1.6rem 0 0.4rem;
+}
+
+p,
+li {
+  color: var(--ink);
+}
+
+.lede,
+.fine,
+footer {
+  color: var(--muted);
+}
+
+.fine,
+footer {
+  font-size: 0.92rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+footer {
+  padding-bottom: 2.5rem;
+}
